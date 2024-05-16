@@ -21,10 +21,9 @@ public class QuizController {
     QuizService quizservice;
 
 
-
+    //http://localhost:8080/quiz/create?category=JAVA&numq=4&title=JAVAQuiz
     @PostMapping(path="create")
     public ResponseEntity<String>  createQuiz(@RequestParam String category,@RequestParam int numq,@RequestParam String title){
-      //quizservice.GetQuizQuestions();
 
         return quizservice.createQuiz(category,numq,title);
     }
